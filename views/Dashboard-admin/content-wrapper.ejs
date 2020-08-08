@@ -1,0 +1,157 @@
+<div id="content-wrapper" class="d-flex flex-column">
+    <!-- Main Content -->
+    <div id="content">
+
+      <!-- Topbar -->      <!-- End of Topbar -->
+      <%- include('nav-bar') %>
+      <!-- Begin Page Content -->
+      <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <!-- <div class="d-sm-flex align-items-center justify-content-between mb-4">
+          <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+          <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+        </div> -->
+
+        <!-- Content Row -->
+        <div class="row">
+
+          <!-- Earnings (Monthly) Card Example -->
+          <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2 bg-success">
+              <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col-auto">
+                        <i class="fa fa-user fa-2x text-white"></i>
+                      </div>
+                  <div class="col ml-4">
+                    <div class="text-xl font-weight-bold text-white text-uppercase mb-1 text-center h6">Users</div>
+                    <div class="h4 mb-0 font-weight-bold text-white text-center"><%= record_users %></div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2 bg-primary">
+              <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col-auto">
+                        <i class="fa fa-store fa-2x text-white"></i>
+                      </div>
+                  <div class="col ml-4">
+                    <div class="text-xl font-weight-bold text-white text-uppercase mb-1  h6 text-center">Catering Shops</div>
+                    <div class="h4 mb-0 font-weight-bold text-white  text-center"><%= record_shops %></div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2 bg-info">
+              <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col-auto">
+                        <i class="fa fa-check fa-2x text-white"></i>
+                      </div>
+                  <div class="col ml-4">
+                    <div class="text-xl font-weight-bold text-white text-uppercase mb-1 text-center h6">Orders</div>
+                    <div class="h4 mb-0 font-weight-bold text-white text-center"><%= records_order %></div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2 bg-warning">
+              <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col-auto ">
+                      <div>
+                        <div class="text-xl font-weight-bold text-white text-uppercase  h6 text-center" id="month"></div>
+                        <div class="h5 mb-0 font-weight-bold text-white text-center" id="date"></div>
+                      </div>
+                      </div>
+                   
+                      <hr class="sidebar-divider my-0">
+                  <div class="col-auto">
+                    <div class="border-left-light">
+                    <div class="text-xl font-weight-bold text-white text-uppercase text-center h6 ml-3" id="day"></div>
+                    <div class="h5 mb-0 font-weight-bold text-white text-center ml-3" id="time"></div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+   
+          <!-- Pending Requests Card Example -->
+      
+        </div>
+
+        <!-- Content Row -->
+
+        <div class="row">
+
+          <!-- Area Chart -->
+          <div class="col-xl-12 col-lg-7">
+            <div class="card shadow mb-4">
+              <!-- Card Header - Dropdown -->
+              <div class="card-header  d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
+                <div class="dropdown no-arrow">
+              
+                  
+                </div>
+              </div>
+              <!-- Card Body -->
+              <div class="card-body">
+                  <div class="chart-area">
+                    <canvas id="myAreaChart"></canvas>
+                  </div>
+                
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Pie Chart -->
+                </div>
+
+        <!-- Content Row -->
+        <div class="row">
+
+          <!-- Content Column -->
+     
+          <div class="col-lg-6 mb-4">
+
+            <!-- Illustrations -->
+     
+            <!-- Approach -->
+     
+          </div>
+        </div>
+
+      </div>
+      <!-- /.container-fluid -->
+
+    </div>
+    <!-- End of Main Content -->
+
+    <!-- Footer -->
+    <footer class="sticky-footer bg-white">
+      <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+          <span>Copyright &copy; Khansamaa 2020</span>
+        </div>
+      </div>
+    </footer>
+    <!-- End of Footer -->
+    <%- include('footer') %>
+  </div>

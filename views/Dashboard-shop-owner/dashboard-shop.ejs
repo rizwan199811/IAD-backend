@@ -1,0 +1,108 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<%- include('header') %>
+</head>
+
+<body id="page-top">
+ 
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <%- include('sidebar') %>
+    <!-- End of Sidebar -->
+    <!-- Content Wrapper -->
+    <%- include('content-wrapper') %>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+  <% var test = 101; %> 
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+          
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="/logout">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="../js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="../vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="../js/demo/chart-area-demo.js"></script>
+  <script src="../js/demo/chart-pie-demo.js"></script>
+  <script>
+    var d = new Date();
+    var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    document.getElementById("month").innerHTML = months[d.getMonth()];
+    document.getElementById("date").innerHTML = d.getDate();
+    document.getElementById("day").innerHTML = days[d.getDay()];
+    var n = d.toLocaleString([], { hour: '2-digit', minute: '2-digit' });
+    document.getElementById("time").innerHTML = n;
+ 
+    </script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <script type="text/javascript">
+    let ejs = require('ejs');
+    window.onload = function () {
+      var getTest = test  //var test is now assigned to getTest which will only work on browsers
+           console.log(getTest);
+
+      var myChart = new CanvasJS.Chart("chartContainer", {
+        data: [              
+        {
+
+          // Change type to "doughnut", "line", "splineArea", etc.
+          type: "column",
+          dataPoints: [
+            { label:"hello"  ,  y: 10  },
+            { label: "orange", y: 15  },
+            { label: "banana", y: 25  },
+            { label: "mango",  y: 30  },
+            { label: "grape",  y: 28  }
+          ]
+        }
+        ]
+      });
+      chart.render();
+    }
+    </script>
+    
+
+</body>
+
+</html>
